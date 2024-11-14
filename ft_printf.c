@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 11:42:04 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/14 13:41:27 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/14 15:11:11 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_isconv(char c)
 {
-	int	i;
-	char *charset;
+	int		i;
+	char	*charset;
 
 	i = 0;
 	charset = "cspiudxX%";
@@ -39,19 +39,19 @@ void	ft_conversions(va_list ap, const char *format, int	*i, int *len)
 	if (format[*i + 1] && format[*i + 1] == 'c')
 		*len += ft_print_c((char)va_arg(ap, int));
 	if (format[*i + 1] && format[*i + 1] == 's')
-		*len +=ft_print_s((char *)va_arg(ap, char *));
+		*len += ft_print_s((char *)va_arg(ap, char *));
 	if (format[*i + 1] && format[*i + 1] == 'p')
-		*len +=ft_print_p((unsigned long long)va_arg(ap, unsigned long long));
+		*len += ft_print_p((unsigned long long)va_arg(ap, unsigned long long));
 	if (format[*i + 1] && format[*i + 1] == 'i')
-		*len +=ft_print_d((int)va_arg(ap, int));
+		*len += ft_print_d((int)va_arg(ap, int));
 	if (format[*i + 1] && format[*i + 1] == 'u')
-		*len +=ft_print_u((unsigned int)va_arg(ap, unsigned int));
+		*len += ft_print_u((unsigned int)va_arg(ap, unsigned int));
 	if (format[*i + 1] && format[*i + 1] == 'd')
-		*len +=ft_print_d((long)va_arg(ap, long));
+		*len += ft_print_d((long)va_arg(ap, long));
 	if (format[*i + 1] && format[*i + 1] == 'x')
-		*len +=ft_print_x((unsigned int)va_arg(ap, unsigned int));
+		*len += ft_print_x((unsigned int)va_arg(ap, unsigned int));
 	if (format[*i + 1] && format[*i + 1] == 'X')
-		*len +=ft_print_x((unsigned int)va_arg(ap, unsigned int));
+		*len += ft_print_x((unsigned int)va_arg(ap, unsigned int));
 }
 
 int	ft_printf(const char *format, ...)
@@ -59,7 +59,7 @@ int	ft_printf(const char *format, ...)
 	va_list	ap;
 	int		len;
 	int		i;
-	
+
 	va_start(ap, format);
 	len = 0;
 	i = 0;
@@ -72,13 +72,13 @@ int	ft_printf(const char *format, ...)
 	while (format[i])
 	{
 		if (format[i] == '%' && ft_isconv(format[i + 1]))
-		{	
+		{
 			if (format[i + 1] == '%')
-				len += ft_printchar('%');	
+				len += ft_printchar('%');
 			else
 				ft_conversions(ap, format, &i, &len);
 			i += 2;
-			continue;
+			continue ;
 		}
 		len += ft_printchar(format[i]);
 		i++;
@@ -88,7 +88,7 @@ int	ft_printf(const char *format, ...)
 
 int	main(void)
 {
-	printf("OG Allo = %d Allo2 = %d\n", 1646414566459656, 123);
-	ft_printf("MINE Allo = %d Allo2 = %d", 1646414566459656, 123);
+	printf("OG Allo = %c Allo2 = %c\n", 'a','c');
+	ft_printf("MINE Allo = %c Allo2 = %c", 'a', 'c');
 	return 0;
 }
