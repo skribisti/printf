@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 11:42:04 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/14 09:27:35 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/14 09:52:23 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,10 @@ int	ft_printf(const char *str, ...)
 			//...
 	}
 	return (len);
+}
+
+int	main(void)
+{
+	ft_printf("allo");
+	return 0;
 }
