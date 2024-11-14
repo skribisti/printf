@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 11:42:04 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/14 09:14:51 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/14 09:15:06 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_isconv(char c)
 
 int	ft_printf(const char *str, ...)
 {
-	va_list	ap;
+	//va_list	ap;
 	int		len;
 	int		i;
 	printf(";%ld;R", (-9223372036854775807L - 1));
