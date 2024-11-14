@@ -6,13 +6,13 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:12:34 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/14 10:22:24 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/14 11:43:07 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_s(void)
+int	ft_print_s(char *str)
 {
 	printf("null-terminated string");
 	return 1;

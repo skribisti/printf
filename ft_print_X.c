@@ -6,13 +6,13 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:17:59 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/14 10:18:08 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/14 11:44:43 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_X(void)
+int	ft_print_X(unsigned int nb)
 {
 	printf("hexa upper");
 	return 1;

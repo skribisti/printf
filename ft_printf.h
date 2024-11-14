@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 08:45:41 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/14 10:22:14 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/14 11:28:44 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,17 @@
 
 #include <stdio.h> //temporaire
 
-int	ft_printf(const char *str, ...);
 
-int	ft_print_c(void);
-int	ft_print_s(void);
-int	ft_print_p(void);
-int	ft_print_d(void);
 int	ft_print_i(void);
-int	ft_print_u(void);
-int	ft_print_x(void);
-int	ft_print_X(void);
+
+int		ft_printf(const char *format, ...);
+
+int		ft_print_c(char c);
+int		ft_print_s(char	*str);
+int		ft_print_d(int nb);
+int		ft_print_u(unsigned int n);
+int		ft_print_p(unsigned long long nb);
+int		ft_print_x(unsigned int nb);
+int		ft_print_X(unsigned int nb);
 
 #endif

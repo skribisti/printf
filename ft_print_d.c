@@ -6,14 +6,30 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:15:34 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/14 10:16:22 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/14 11:51:42 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_d(void)
+int	ft_print_d(int nb)
 {
-	printf("integer D");
+	char	z;
+
+	z = '0';
+	if (nb == -2147483648)
+	{
+		write(1, "-2147483648", 11);
+		return 1;
+	}
+	if (nb < 0)
+	{
+		nb = -nb;
+		write(1, "-", 1);
+	}
+	if (nb > 9)
+		ft_print_d(nb / 10);
+	z = z + nb % 10;
+	write(1, &z, 1);
 	return 1;
 }

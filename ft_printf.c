@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 11:42:04 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/14 11:01:54 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/14 11:56:01 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,22 +37,21 @@ int	ft_printchar(char c)
 void	ft_conversions(va_list ap, const char *format, int	*i, int *len)
 {
 	if (format[*i + 1] && format[*i + 1] == 'c')
-		*len += ft_print_c();
+		*len += ft_print_c((char)va_arg(ap, int));
 	if (format[*i + 1] && format[*i + 1] == 's')
-		*len +=ft_print_s();
+		*len +=ft_print_s((char *)va_arg(ap, char *));
 	if (format[*i + 1] && format[*i + 1] == 'p')
-		*len +=ft_print_p();
+		*len +=ft_print_p((unsigned long long)va_arg(ap, unsigned long long));
 	if (format[*i + 1] && format[*i + 1] == 'i')
-		*len +=ft_print_i();
+		*len +=ft_print_d((int)va_arg(ap, int));
 	if (format[*i + 1] && format[*i + 1] == 'u')
-		*len +=ft_print_u();
+		*len +=ft_print_u((unsigned int)va_arg(ap, unsigned int));
 	if (format[*i + 1] && format[*i + 1] == 'd')
-		*len +=ft_print_d();
+		*len +=ft_print_d((long)va_arg(ap, long));
 	if (format[*i + 1] && format[*i + 1] == 'x')
-		*len +=ft_print_x();
+		*len +=ft_print_x((unsigned int)va_arg(ap, unsigned int));
 	if (format[*i + 1] && format[*i + 1] == 'X')
-		*len +=ft_print_x();
-	return ;
+		*len +=ft_print_x((unsigned int)va_arg(ap, unsigned int));
 }
 
 int	ft_printf(const char *format, ...)
@@ -89,6 +88,7 @@ int	ft_printf(const char *format, ...)
 
 int	main(void)
 {
-	ft_printf("allo%d bonjour");
+	//printf("OG Allo = %d\n", 1646414566459656);
+	ft_printf("MINE Allo = %d", 1646414566459656);
 	return 0;
 }
