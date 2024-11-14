@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 11:42:04 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/14 15:11:11 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/14 15:14:01 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,10 +85,10 @@ int	ft_printf(const char *format, ...)
 	}
 	return (len);
 }
-
+/*
 int	main(void)
 {
 	printf("OG Allo = %c Allo2 = %c\n", 'a','c');
 	ft_printf("MINE Allo = %c Allo2 = %c", 'a', 'c');
 	return 0;
-}
+}*/
