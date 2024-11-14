@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 11:42:04 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/14 10:56:05 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/14 11:01:54 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,6 @@ int	ft_printf(const char *format, ...)
 	va_list	ap;
 	int		len;
 	int		i;
-	char newline = '\n';
 	
 	va_start(ap, format);
 	len = 0;
