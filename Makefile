@@ -1,6 +1,6 @@
 NAME = libftprintf.a
 SRC = ft_printf.c
-OBJ = $(SRC.c=.o)
+OBJ = $(SRC:.c=.o)
 FLAGS = -Wall -Wextra -Werror
 
 .PHONY: all clean fclean re bonus
@@ -21,4 +21,4 @@ fclean :
 re : fclean all
 
 dev :
-	make fclean; git add .; git commit -m "auto update"; git push; paco; make fclean
+	make fclean; git add .; git commit -m "auto update"; git push; /home/norabino/francinette/tester.sh; make fclean
