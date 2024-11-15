@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:14:15 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/14 11:42:47 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/15 15:23:18 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 int	ft_print_p(unsigned long long nb)
 {
 	printf("adress of pointer");
-	return 1;
+	return nb;
 }
