@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 11:42:04 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/15 15:17:00 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/15 15:57:20 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,9 @@ void	ft_conversions(va_list ap, const char *format, int	*i, int *len)
 	if (format[*i + 1] && format[*i + 1] == 'd')
 		*len += ft_print_d((long)va_arg(ap, long));
 	if (format[*i + 1] && format[*i + 1] == 'x')
-		*len += ft_print_x((unsigned int)va_arg(ap, unsigned int));
+		*len += ft_print_x((unsigned long)va_arg(ap, unsigned long));
 	if (format[*i + 1] && format[*i + 1] == 'X')
-		*len += ft_print_x((unsigned int)va_arg(ap, unsigned int));
+		*len += ft_print_X((unsigned long)va_arg(ap, unsigned long));
 }
 
 int	ft_printf(const char *format, ...)
@@ -85,19 +85,18 @@ int	ft_printf(const char *format, ...)
 	}
 	return (len);
 }
-/*
+
 int	main(void)
 {
 	int i;
 	int j;
 
 	printf("\noutput of real:\n");
-	i = printf("Char = %c\n String = %s\n Digit = %d\n Percent = %%\n Int : %i\n UInt = %u\n HexaLow = %x\n HexaUp = %X\n", 'a',"allo", -4500, 8923, 42294, 100, 100);
+	i = printf("Char = %c\n String = %s\n Digit = %d\n Percent = %%\n Int : %i\n UInt = %u\n HexaLow = %x\n HexaUp = %X\n", 'a',"allo", -4500, 8923, 42294, -100000, 100000);
 	printf("\noutput of fake:\n");
-	j = ft_printf("Char = %c\n String = %s\n Digit = %d\n Percent = %%\n Int : %i\n UInt = %u\n HexaLow = %x\n HexaUp = %X\n", 'a',"allo", -4500, 8923, 42294, 100, 100);
+	j = ft_printf("Char = %c\n String = %s\n Digit = %d\n Percent = %%\n Int : %i\n UInt = %u\n HexaLow = %x\n HexaUp = %X\n", 'a',"allo", -4500, 8923, 42294, -100000, 100000);
 
 	printf("\n\nreal:%d,fake:%d",i,j);
 	
 	return (1);
 }
-*/
