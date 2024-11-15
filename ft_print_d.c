@@ -6,16 +6,34 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:15:34 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/14 11:51:42 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/15 12:20:40 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdio.h>
+
+int	ft_size(int	nb)
+{
+	int	size;
+
+	size = 1;
+	if (nb == -2147483648)
+		return (11);
+	while (nb > 10)
+	{
+		nb = nb / 10;
+		size++;
+	}
+	return (size);
+}
 
 int	ft_print_d(int nb)
 {
 	char	z;
+	int		size;
 
+	size = 0;
 	z = '0';
 	if (nb == -2147483648)
 	{
@@ -26,10 +44,12 @@ int	ft_print_d(int nb)
 	{
 		nb = -nb;
 		write(1, "-", 1);
+		size = 1;
 	}
 	if (nb > 9)
 		ft_print_d(nb / 10);
 	z = z + nb % 10;
 	write(1, &z, 1);
-	return 1;
+	size = size + ft_size(nb);
+	return (size);
 }
