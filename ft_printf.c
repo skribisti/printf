@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 11:42:04 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/15 13:30:13 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/15 14:28:02 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,12 +91,10 @@ int	main(void)
 	int i;
 	int j;
 
-	int g = 45;
-
 	printf("\noutput of real:\n");
-	i = printf("OGFT Char = %c String = %s Digit = %d Percent = %%\n", 'a',"allo", -4500);
+	i = printf("OGFT Char = %c\n String = %s\n Digit = %d\n Percent = %%\n Int : %i\n UInt = %u\n", 'a',"allo", -4500, 8923, 4294967294);
 	printf("\noutput of fake:\n");
-	j = ft_printf("MINE Char = %c String = %s Digit = %d Percent = %%\n", 'a',"allo", -4500);
+	j = ft_printf("OGFT Char = %c\n String = %s\n Digit = %d\n Percent = %%\n Int : %i\n UInt = %u\n", 'a',"allo", -4500, 8923, 4294967294);
 
 	printf("\n\nreal:%d,fake:%d",i,j);
 	
