@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_size.c                                          :+:      :+:    :+:   */
+/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/15 14:14:07 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/15 14:55:30 by norabino         ###   ########.fr       */
+/*   Created: 2024/11/15 14:44:09 by norabino          #+#    #+#             */
+/*   Updated: 2024/11/15 15:16:13 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_size(int	nb, int divisor)
+void	ft_putnbr_base(int nbr, char *base)
 {
-	int	size;
-
-	size = 1;
-	if (nb == -2147483648)
-		return (11);
-	while (nb > 10)
+	if (nbr == -2147483648)
 	{
-		nb = nb / divisor;
-		size++;
+		write(1, "-2147483648", 11);
+		return ;
 	}
-	return (size);
+	if (nbr < 0)
+	{
+		nbr = -nbr;
+		write(1, "-", 1);
+	}
+	if (nbr > ft_strlen(base) - 1)
+		ft_putnbr_base(nbr / ft_strlen(base), base);
+	write(1, &base[nbr % ft_strlen(base)], 1);
 }

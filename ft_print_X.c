@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:17:59 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/14 11:44:43 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/15 15:15:47 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 int	ft_print_X(unsigned int nb)
 {
-	printf("hexa upper");
-	return 1;
+	ft_putnbr_base(nb, "0123456789ABCDEF");
+	return (ft_size(nb, ft_strlen("0123456789ABCDEF")));
 }

@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 11:42:04 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/15 14:28:02 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/15 14:47:33 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,9 +92,9 @@ int	main(void)
 	int j;
 
 	printf("\noutput of real:\n");
-	i = printf("OGFT Char = %c\n String = %s\n Digit = %d\n Percent = %%\n Int : %i\n UInt = %u\n", 'a',"allo", -4500, 8923, 4294967294);
+	i = printf("Char = %c\n String = %s\n Digit = %d\n Percent = %%\n Int : %i\n UInt = %u\n HexaLow = %x\n HexaUp = %X\n", 'a',"allo", -4500, 8923, 42294, 100, 100);
 	printf("\noutput of fake:\n");
-	j = ft_printf("OGFT Char = %c\n String = %s\n Digit = %d\n Percent = %%\n Int : %i\n UInt = %u\n", 'a',"allo", -4500, 8923, 4294967294);
+	j = ft_printf("Char = %c\n String = %s\n Digit = %d\n Percent = %%\n Int : %i\n UInt = %u\n HexaLow = %x\n HexaUp = %X\n", 'a',"allo", -4500, 8923, 42294, 100, 100);
 
 	printf("\n\nreal:%d,fake:%d",i,j);
 	

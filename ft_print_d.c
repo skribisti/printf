@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:15:34 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/15 14:14:38 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/15 14:56:31 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_print_d(int nb)
 	if (nb == -2147483648)
 	{
 		write(1, "-2147483648", 11);
-		return 1;
+		return (11);
 	}
 	if (nb < 0)
 	{
@@ -35,6 +35,6 @@ int	ft_print_d(int nb)
 		ft_print_d(nb / 10);
 	z = z + nb % 10;
 	write(1, &z, 1);
-	size = size + ft_size(nb);
+	size = size + ft_size(nb, 10);
 	return (size);
 }
