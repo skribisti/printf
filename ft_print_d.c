@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:15:34 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/18 08:59:09 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/18 09:07:40 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_print_d(int nb)
 	char	z;
 	int		len;
 	long	n;
-	
+
 	n = (long)nb;
 	len = 0;
 	z = '0';

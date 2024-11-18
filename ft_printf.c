@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 11:42:04 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/18 09:03:24 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/18 09:06:02 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	ft_conversions(va_list ap, const char *format, int	*i, int *len)
 	if (format[*i + 1] && format[*i + 1] == 'x')
 		*len += ft_print_x((unsigned long long)va_arg(ap, unsigned long long));
 	if (format[*i + 1] && format[*i + 1] == 'X')
-		*len += ft_print_X((unsigned long long)va_arg(ap, unsigned long long));
+		*len += ft_print_bigx((unsigned long long)va_arg(ap, unsigned long long));
 }
 
 int	ft_printf(const char *format, ...)

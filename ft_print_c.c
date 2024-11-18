@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:08:32 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/14 11:25:05 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/18 09:03:58 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 int	ft_print_c(char c)
 {
 	write(1, &c, 1);
-	return 1;
+	return (1);
 }
