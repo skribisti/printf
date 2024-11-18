@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 11:42:04 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/18 10:34:40 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/18 10:35:25 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ int	ft_printf(const char *format, ...)
 	}
 	return (len);
 }
-
+/*
 int	main(void)
 {
 	int	i;
@@ -90,4 +90,4 @@ int	main(void)
 
 	printf("\n\nreal:%d,fake:%d",i,j);
 	return 0;
-}
+}*/
