@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 11:00:41 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/18 11:29:07 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/18 11:48:15 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ int	ft_size(int nb, int divisor)
 {
 	int	len;
 
-	len = 0;
+	len = 1;
 	while (nb > divisor - 1)
 	{
-		nb /= divisor;
+		nb = nb / divisor;
 		len++;
 	}
 	return (len);
