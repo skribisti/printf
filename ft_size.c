@@ -6,13 +6,13 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 11:00:41 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/18 11:01:07 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/18 11:29:07 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_size(int nb, int	divisor)
+int	ft_size(int nb, int divisor)
 {
 	int	len;
 
