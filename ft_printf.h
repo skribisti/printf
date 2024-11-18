@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 08:45:41 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/18 14:24:11 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/18 14:54:49 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 int		ft_print_i(void);
 
 int		ft_printf(const char *format, ...);
-int		ft_size(int nb, int divisor);
+int		ft_size(long long nb, long long divisor);
 int		ft_print_c(char c);
 int		ft_print_s(char	*str);
 int		ft_print_d(int nb);

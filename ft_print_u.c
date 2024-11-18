@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:10:07 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/18 14:32:09 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/18 14:54:08 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,14 @@
 
 int	ft_print_u(unsigned int nb)
 {
-	char	z;
-	int		len;
-	long	n;
+	char			z;
+	int				len;
 
-	n = (long)nb;
-	len = 0;
+	len = ft_size(nb, 10);
 	z = '0';
-	if (n > 9)
-		ft_print_u(n / 10);
-	z = z + n % 10;
-	len += ft_print_c(z);
-	printf("%d\n", len);
-	printf("%c\n", z);
+	if (nb > 9)
+		ft_print_u(nb / 10);
+	z = z + nb % 10;
+	ft_print_c(z);
 	return (len);
-}
-
-int	main()
-{
-	ft_print_u(-1);
 }

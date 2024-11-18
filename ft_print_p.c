@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:14:15 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/18 12:20:17 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/18 14:55:12 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,8 @@ int	ft_print_p(unsigned long long nb)
 	if (n < 0)
 	{
 		ft_put_ptr(n);
-		//len += ft_size((int *)n, 16);
 	}
 	return (len);
 }
+
+//len += ft_size((int *)n, 16);	ligne 46
