@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_p.c                                       :+:      :+:    :+:   */
+/*   ft_size.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/14 10:14:15 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/18 11:04:48 by norabino         ###   ########.fr       */
+/*   Created: 2024/11/18 11:00:41 by norabino          #+#    #+#             */
+/*   Updated: 2024/11/18 11:01:07 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_p(unsigned long long nb)
+int	ft_size(int nb, int	divisor)
 {
-	int		len;
-	long	n;	
+	int	len;
 
-	n = (long)nb;
 	len = 0;
-	len += ft_print_s("0x");
-	if (n == 0)
+	while (nb > divisor - 1)
 	{
-		len += ft_print_s("(nil)");
-		return (len);
+		nb /= divisor;
+		len++;
 	}
-	ft_putnbr_base(n, "0123456789abcdef", &len);
 	return (len);
 }
