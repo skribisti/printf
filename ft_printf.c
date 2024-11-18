@@ -6,11 +6,12 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 11:42:04 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/18 17:05:28 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/18 17:38:19 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <limits.h>
 
 int	ft_isconv(char c)
 {
@@ -35,7 +36,7 @@ void	ft_conversions(va_list ap, const char *format, int	*i, int *len)
 	if (format[*i + 1] && format[*i + 1] == 's')
 		*len += ft_print_s((char *)va_arg(ap, char *));
 	if (format[*i + 1] && format[*i + 1] == 'p')
-		*len += ft_print_p((unsigned long long)va_arg(ap, unsigned long long));
+		*len += ft_print_p((void *)va_arg(ap, void *));
 	if (format[*i + 1] && format[*i + 1] == 'i')
 		*len += ft_print_d((int)va_arg(ap, int));
 	if (format[*i + 1] && format[*i + 1] == 'u')
@@ -77,15 +78,15 @@ int	ft_printf(const char *format, ...)
 	return (len);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	int	i;
 	int	j;
 
 	printf("\noutput of real:\n");
-	i = printf("%p %p", -2147483648, 2147483647);
+	i = printf("%p", -1);
 	printf("\n\noutput of fake:\n");
-	j = ft_printf("%p %p", -2147483648, 2147483647);
+	j = ft_printf("%p", -1);
 	printf("\n\nreal : %d, fake : %d", i, j);
 	return (0);
-}
+}*/
