@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 11:42:04 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/18 09:06:02 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/18 10:34:01 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	ft_conversions(va_list ap, const char *format, int	*i, int *len)
 	if (format[*i + 1] && format[*i + 1] == 'x')
 		*len += ft_print_x((unsigned long long)va_arg(ap, unsigned long long));
 	if (format[*i + 1] && format[*i + 1] == 'X')
-		*len += ft_print_bigx((unsigned long long)va_arg(ap, unsigned long long));
+		*len += ft_print_bx((unsigned long long)va_arg(ap, unsigned long long));
 }
 
 int	ft_printf(const char *format, ...)
@@ -56,17 +56,18 @@ int	ft_printf(const char *format, ...)
 
 	va_start(ap, format);
 	len = 0;
-	i = -1;
-	while (format[i++] != '%' && format[i])
-		len += ft_print_c(format[i]);
+	i = 0;
 	while (format[i])
 	{
+		if (format[i] == '%' && format[i + 1] == '%')
+		{
+			len += ft_print_c('%');
+			i += 2;
+			continue ;
+		}
 		if (format[i] == '%' && ft_isconv(format[i + 1]))
 		{
-			if (format[i + 1] == '%')
-				len += ft_print_c('%');
-			else
-				ft_conversions(ap, format, &i, &len);
+			ft_conversions(ap, format, &i, &len);
 			i += 2;
 			continue ;
 		}
@@ -75,20 +76,18 @@ int	ft_printf(const char *format, ...)
 	}
 	return (len);
 }
-/*
-int	main(void)
+
+/*int	main(void)
 {
-	int i;
-	int j;
-	int	test = 0;
+	int	i;
+	int	j;
 
 	printf("\noutput of real:\n");
-	i = printf("Char = %c\n String = %s\n Digit = %d\n Percent = %%\n Int : %i\n UInt = %u\n HexaLow = %x\n HexaUp = %X\n Pointer : %p\n", 'a',"allo", -4500, 8923, 42294, 100000, 100000, &test);
+	i = printf("%d", (111110));
+
 	printf("\noutput of fake:\n");
-	j = ft_printf("Char = %c\n String = %s\n Digit = %d\n Percent = %%\n Int : %i\n UInt = %u\n HexaLow = %x\n HexaUp = %X\n Pointer : %p\n", 'a',"allo", -4500, 8923, 42294, 100000, 100000, &test);
+	j = ft_printf("%d", (111110));
 
 	printf("\n\nreal:%d,fake:%d",i,j);
-	
-	return (1);
-}
-*/
+	return 0;
+}*/

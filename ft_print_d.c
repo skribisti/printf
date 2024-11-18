@@ -6,20 +6,33 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:15:34 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/18 09:07:40 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/18 10:32:40 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+int	ft_size(int nb)
+{
+	int	len;
+
+	len = 0;
+	while (nb > 9)
+	{
+		nb /= 10;
+		len++;
+	}
+	return (len);
+}
+
 int	ft_print_d(int nb)
 {
 	char	z;
-	int		len;
 	long	n;
+	int		len;
 
+	len = ft_size(nb);
 	n = (long)nb;
-	len = 0;
 	z = '0';
 	if (n < 0)
 	{
