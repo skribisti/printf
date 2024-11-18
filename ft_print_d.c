@@ -6,12 +6,11 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:15:34 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/18 08:47:56 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/18 08:59:09 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
 int	ft_print_d(int nb)
 {
@@ -27,8 +26,9 @@ int	ft_print_d(int nb)
 		n = -n;
 		len += ft_print_c('-');
 	}
-	if (nb > 9)
-		ft_print_d(nb / 10);
-	len += ft_print_c(n % 10);
+	if (n > 9)
+		ft_print_d(n / 10);
+	z += n % 10;
+	len += ft_print_c(z);
 	return (len);
 }
