@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 11:42:04 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/15 15:59:42 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/18 08:48:47 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,11 +90,14 @@ int	main(void)
 {
 	int i;
 	int j;
+	char z = 'z';
 
 	printf("\noutput of real:\n");
-	i = printf("Char = %c\n String = %s\n Digit = %d\n Percent = %%\n Int : %i\n UInt = %u\n HexaLow = %x\n HexaUp = %X\n", 'a',"allo", -4500, 8923, 42294, -100000, 100000);
+	i = printf("RPointer : %p", &z);
+	//i = printf("Char = %c\n String = %s\n Digit = %d\n Percent = %%\n Int : %i\n UInt = %u\n HexaLow = %x\n HexaUp = %X\n", 'a',"allo", -4500, 8923, 42294, -100000, 100000);
 	printf("\noutput of fake:\n");
-	j = ft_printf("Char = %c\n String = %s\n Digit = %d\n Percent = %%\n Int : %i\n UInt = %u\n HexaLow = %x\n HexaUp = %X\n", 'a',"allo", -4500, 8923, 42294, -100000, 100000);
+	j = ft_printf("FPointer : %p", &z);
+	//j = ft_printf("Char = %c\n String = %s\n Digit = %d\n Percent = %%\n Int : %i\n UInt = %u\n HexaLow = %x\n HexaUp = %X\n", 'a',"allo", -4500, 8923, 42294, -100000, 100000);
 
 	printf("\n\nreal:%d,fake:%d",i,j);
 	

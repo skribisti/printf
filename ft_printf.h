@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 08:45:41 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/15 14:55:43 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/18 08:42:22 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,7 @@ int		ft_print_u(unsigned int n);
 int		ft_print_p(unsigned long long nb);
 int		ft_print_x(unsigned int nb);
 int		ft_print_X(unsigned int nb);
-int		ft_size(int nb, int divisor);
 int		ft_strlen(char *str);
-void	ft_putnbr_base(int nb, char *str);
+void	ft_putnbr_base(int nb, char *str, int *ptr_len);
 
 #endif
