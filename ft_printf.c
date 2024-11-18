@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 11:42:04 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/18 09:01:27 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/18 09:03:24 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,6 @@ int	ft_isconv(char c)
 		i++;
 	}
 	return (0);
-}
-
-int	ft_printchar(char c)
-{
-	write(1, &c, 1);
-	return (1);
 }
 
 void	ft_conversions(va_list ap, const char *format, int	*i, int *len)
@@ -62,25 +56,21 @@ int	ft_printf(const char *format, ...)
 
 	va_start(ap, format);
 	len = 0;
-	i = 0;
-	while (format[i] != '%' && format[i])
-	{
-		write(1, &format[i], 1);
-		i++;
-		len++;
-	}
+	i = -1;
+	while (format[i++] != '%' && format[i])
+		len += ft_print_c(format[i]);
 	while (format[i])
 	{
 		if (format[i] == '%' && ft_isconv(format[i + 1]))
 		{
 			if (format[i + 1] == '%')
-				len += ft_printchar('%');
+				len += ft_print_c('%');
 			else
 				ft_conversions(ap, format, &i, &len);
 			i += 2;
 			continue ;
 		}
-		len += ft_printchar(format[i]);
+		len += ft_print_c(format[i]);
 		i++;
 	}
 	return (len);
