@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:14:15 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/18 15:45:26 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/18 15:47:18 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,5 @@ int	ft_print_p(unsigned long nb)
 		ft_putnbr_base(nb, "0123456789abcdef", &len);
 		return (len);
 	}
-	
 	return (len);
 }
