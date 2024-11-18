@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 11:42:04 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/18 14:54:39 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/18 15:28:29 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,9 +83,9 @@ int	ft_printf(const char *format, ...)
 	int	j;
 
 	printf("\noutput of real:\n");
-	i = printf("%u", 11);
+	i = printf("%X", -999999999912);
 	printf("\n\noutput of fake:\n");
-	j = ft_printf("%u", 11);
+	j = ft_printf("%X", -999999999912);
 	printf("\n\nreal:%d,fake:%d",i,j);
 	return 0;
 }*/

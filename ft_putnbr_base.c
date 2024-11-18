@@ -6,17 +6,14 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 14:44:09 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/18 09:06:29 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/18 15:11:45 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putnbr_base(int nbr, char *base, int *ptr_len)
+void	ft_putnbr_base(long nb, char *base, int *ptr_len)
 {
-	long	nb;
-
-	nb = (long)nbr;
 	if (nb < 0)
 	{
 		nb = -nb;
@@ -26,3 +23,9 @@ void	ft_putnbr_base(int nbr, char *base, int *ptr_len)
 		ft_putnbr_base(nb / ft_strlen(base), base, ptr_len);
 	*ptr_len += ft_print_c(base[nb % ft_strlen(base)]);
 }
+
+/*int	main()
+{
+	int len = 0;
+	ft_putnbr_base(2147483648, "0123456789abcdef", &len);
+}*/
