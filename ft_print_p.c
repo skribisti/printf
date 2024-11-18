@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:14:15 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/18 14:57:53 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/18 14:59:44 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,10 @@ int	ft_print_p(unsigned long long nb)
 	int		len;
 	long	n;	
 
+	len = 0;
 	n = (long)nb;
 	if (n == 0)
-		len += ft_print_s("(nil)");
+		return (ft_print_s("(nil)"));
 	len = 0;
 	len += ft_print_s("0x");
 	if (n > 0)
