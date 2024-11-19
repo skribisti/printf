@@ -6,13 +6,13 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 14:42:34 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/18 17:32:12 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/19 11:25:06 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_strlen(char *str)
+unsigned int	ft_strlen(char *str)
 {
 	int	i;
 

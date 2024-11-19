@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 14:44:09 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/18 17:30:01 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/19 11:29:49 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,3 @@ void	ft_putnbr_base(long nb, char *base, int *ptr_len)
 		ft_putnbr_base(nb / ft_strlen(base), base, ptr_len);
 	*ptr_len += ft_print_c(base[nb % ft_strlen(base)]);
 }
-
-/*int	main()
-{
-	int len = 0;
-	ft_putnbr_base(2147483648, "0123456789abcdef", &len);
-}*/

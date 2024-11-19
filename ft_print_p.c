@@ -6,27 +6,17 @@
 /*   By: norabino <norabino@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:14:15 by norabino          #+#    #+#             */
-/*   Updated: 2024/11/18 17:39:14 by norabino         ###   ########.fr       */
+/*   Updated: 2024/11/19 11:29:21 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-unsigned int	ft_ptrlen(char *ptr)
-{
-	unsigned int	i;
-
-	i = 0;
-	while (ptr[i])
-		i++;
-	return (i);
-}
-
 void	ft_putnbr_ptr(unsigned long nb, char *base, int *ptr_len)
 {
-	if (nb > ft_ptrlen(base) - 1)
-		ft_putnbr_base(nb / ft_ptrlen(base), base, ptr_len);
-	*ptr_len += ft_print_c(base[nb % ft_ptrlen(base)]);
+	if (nb > (long unsigned int)ft_strlen(base) - 1)
+		ft_putnbr_ptr(nb / (long unsigned int)ft_strlen(base), base, ptr_len);
+	*ptr_len += ft_print_c(base[nb % (long unsigned int)ft_strlen(base)]);
 }
 
 int	ft_print_p(void *nb)
