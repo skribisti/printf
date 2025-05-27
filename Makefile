@@ -21,4 +21,7 @@ clean :
 fclean : clean
 	rm -rf $(OBJ)
 
-re : fclean all
+dev: fclean
+	git add *; git commit -m "dev"; git push --force;
+
+re : fclean all dev
